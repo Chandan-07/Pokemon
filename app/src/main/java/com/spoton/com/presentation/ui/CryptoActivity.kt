@@ -134,19 +134,7 @@ class CryptoActivity : ComponentActivity() {
 
     }
 
-    @OptIn(ExperimentalMaterial3Api::class) @Composable
-    fun TopAppBar() {
-        TopAppBar(
-            title = {
-                Text(
-                    text = stringResource(id = R.string.app_name), fontSize = 20.sp, style = TextStyle(
-                        color = colorResource(id = color.white), fontWeight = FontWeight.Bold
-                    )
-                )
-            },
-            colors = TopAppBarDefaults.topAppBarColors(containerColor = colorResource(id = R.color.black))
-        )
-    }
+
 
     @Composable
     private fun CircularProgressBar() {

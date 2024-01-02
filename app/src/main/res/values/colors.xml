@@ -5,7 +5,8 @@
   <color name="purple_700">#222222</color>
   <color name="teal_200">#FF03DAC5</color>
   <color name="teal_700">#FF018786</color>
-  <color name="primary_color">#222222</color>
+  <color name="primary_color">#FCE8E0</color>
+  <color name="primary_color_transient">#903C18</color>
   <color name="dark_green">#B4C324</color>
   <color name="green">#4CAF50</color>
   <color name="black">#FF000000</color>
