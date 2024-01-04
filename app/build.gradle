@@ -93,7 +93,7 @@ dependencies {
   testImplementation 'junit:junit:4.13.2'
   testImplementation 'org.mockito:mockito-core:3.10.0'
   implementation 'com.google.android.exoplayer:exoplayer-core:2.19.1'
-
+  implementation "com.google.android.exoplayer:exoplayer:2.19.1"
 }
 
 apply plugin: "org.jetbrains.kotlin.kapt"
