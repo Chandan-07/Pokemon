@@ -55,7 +55,7 @@ class MainActivity: AppCompatActivity() {
         }
         val context = LocalContext.current
         Scaffold(topBar = {
-            TopAppBar()
+            ToolBarWithTitel()
         }, content = {
             Column(modifier = Modifier.padding(top = 80.dp)) {
                 Text(
