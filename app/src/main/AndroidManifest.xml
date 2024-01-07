@@ -36,7 +36,8 @@
     </activity>
     <activity android:name="com.spoton.com.presentation.ui.CryptoActivity" />
     <activity android:name="com.spoton.com.presentation.ui.gallery.GalleryActivity" />
-      <activity android:name="com.spoton.com.presentation.ui.gallery.VideoEditActivity" />
+      <activity android:name="com.spoton.com.presentation.ui.gallery.VideoEditActivity"
+          android:theme="@style/Theme.CodeWithCB.NoActionBar"/>
 
   </application>
 
