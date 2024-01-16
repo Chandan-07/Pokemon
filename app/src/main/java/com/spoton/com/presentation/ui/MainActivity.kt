@@ -31,9 +31,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.spoton.com.R
+import com.spoton.com.presentation.ui.AppConstants.SELECTED_URIS
 import com.spoton.com.presentation.ui.gallery.VideoEditActivity
 
 class MainActivity: AppCompatActivity() {
+    val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetMultipleContents()) { uris: List<Uri>? ->
+        // Handle the list of selected URIs here
+        uris?.let { selectedUris ->
+            val intent = Intent(this, VideoEditActivity::class.java)
+            val bundle = Bundle()
+            bundle.putParcelableArrayList(SELECTED_URIS, ArrayList(selectedUris))
+            intent.putExtras(bundle)
+            startActivity(intent)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -44,16 +55,6 @@ class MainActivity: AppCompatActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
     fun HOMESCREEN() {
-         val galleryLauncher = rememberLauncherForActivityResult(contract =
-        ActivityResultContracts.GetContent()) { uri: Uri? ->
-             val intent = Intent(this, VideoEditActivity::class.java)
-             val bundle = Bundle()
-             // Put parcelable URIs into Bundle
-             bundle.putParcelable("selected_uris", uri)
-             intent.putExtras(bundle)
-             startActivity(intent)
-        }
-        val context = LocalContext.current
         Scaffold(topBar = {
             ToolBarWithTitel()
         }, content = {
