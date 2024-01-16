@@ -94,7 +94,9 @@ dependencies {
   testImplementation 'org.mockito:mockito-core:3.10.0'
   implementation 'com.google.android.exoplayer:exoplayer-core:2.19.1'
   implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
-  implementation 'com.github.MasayukiSuda:GPUVideo-android:v0.1.2'
+  implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+  implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:2.1.0'
+
 
 }
 
